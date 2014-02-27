@@ -1,3 +1,8 @@
+//the function fastRead does not perform any checking to see if a valid input is entered which i think scanf does.
+//it just assumes you are entering integer format.
+//variables stored in register are not part of the program stack hence their access time to I/O will be faster.
+
+
 inline void fastread(int* a)
 {
     register char c = 0;
