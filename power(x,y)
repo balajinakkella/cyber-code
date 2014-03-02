@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#define max 1000000007
+ 
+long long int power(long long int x,long long int y) {
+    if(y == 0) return 1;
+    long long int d = power(x, y/2); 
+    if(y%2 == 0) return (d*d)%max;
+    else return (((x*d)%max)*d)%max;
+}
+
+int main()
+{     long long int t,l,m,i,n;
+		char a[103];
+    	scanf("%lld",&t);
+    	while(t--)
+    	{
+            m=n=0;
+            scanf("%s",a);
+            l=strlen(a);
+            for(i=0;i<l;i++)
+            	m=((a[i]-48) + m*10)%max;
+			scanf("%s",a);
+   	        l=strlen(a);
+            for(i=0;i<l;i++)
+            	n=((a[i]-48) + n*10)%(max-1);
+            if(n==0)
+            printf("%lld\n",m%max);
+            else
+            printf("%lld\n",power(m,n)%max);
+	}
+	return 0;
+} 
