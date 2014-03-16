@@ -1,0 +1,15 @@
+long long int countsquares(long long int a,long long int b)
+{            
+    // Return zero if there are obviously no perfect squares
+    if (a < 0 || b < a) return 0;
+
+    // Reset the lower bound if required
+    if (a <= 0) a = 1;
+
+    // Find the number of perfect squares between A & B (INCLUSIVE)
+    return (int)sqrt(b) - (int)sqrt(a-1);  // Now giving the correct count, even when the lower bound value is a whole square (for exp. countsquares(1, 25))
+}
+
+
+
+SOURCE:http://codereview.stackexchange.com/questions/32751/code-review-for-count-perfect-squares
