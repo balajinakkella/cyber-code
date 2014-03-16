@@ -1,54 +1,40 @@
 //template which can be easily implemented in c++
 
-#include <vector>
-#include <list>
-#include <map>
-#include <set>
-#include <deque>
-#include <queue>
-#include <stack>
-#include <bitset>
-#include <algorithm>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <sstream>
-#include <iostream>
-#include <iomanip>
-#include <cstdio>
-#include <cmath>
-#include <cstdlib>
-#include <cctype>
-#include <string>
-#include <cstring>
-#include <ctime>
-#include <string.h>
 
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<cstring>
+#include<stdlib.h>
+#include<algorithm>
+#define getcx getchar_unlocked
+#ifndef ONLINE_JUDGE
+    #define getcx getchar
+#endif
+#define MOD 329885391853
 using namespace std;
 
-typedef long long int64;
-typedef unsigned long long uint64;
-
-inline void fastread(int* a)
+inline long long int in()
 {
-    register char c = 0;
-    while (c < 33)
-        c = getchar();
-    *a = 0;
-    while (c > 33)
-    {
-        *a = *a * 10 + c - '0';
-        c = getchar();
-    }
+   long long int n=0;
+   long long int ch=getcx();long long int sign=1;
+   while( ch < '0' || ch > '9' ){if(ch=='-')sign=-1; ch=getcx();}
+ 
+   while(  ch >= '0' && ch <= '9' )
+           n = (n<<3)+(n<<1) + ch-'0', ch=getcx();
+   return n*sign;
 }
 
 int main()
 {
-  int t;
-  fastread(t);
-  while(t--)
-    {
-      
-    }
-return 0;
+    register long long int t,a,b,ans;
+    t=in();
+    while(t--)
+	{
+        
+	}
+    return 0;
 }
