@@ -1,15 +1,7 @@
 //template which can be easily implemented in c++
 
 
-#include<stdio.h>
-#include<string.h>
-#include<math.h>
-#include<iostream>
-#include<cstdio>
-#include<cmath>
-#include<cstring>
-#include<stdlib.h>
-#include<algorithm>
+#include<bits/stdc++.h>
 #define getcx getchar_unlocked
 #ifndef ONLINE_JUDGE
     #define getcx getchar
