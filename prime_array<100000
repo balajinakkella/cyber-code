@@ -32,3 +32,25 @@ int binarysearch(int prime[],int n,int search)
     return -1;
     //printf("Not found! %d is not present in the list.\n", search);
 }
+
+
+//program to check weather given number is prime 
+bool isPrime (int n)
+{
+   if (n<=1) return false;
+   if (n==2) return true;
+   if (n%2==0) return false;
+   int m=sqrt(n);
+
+   for (int i=3; i<=m; i+=2)
+      if (n%i==0)
+         return false;
+
+   return true;
+}
+
+
+//NOTE: Efficient method to generate prime numbers is to use 'Sieve of Eratosthenes' method.
+Sourcereference http://help.topcoder.com/data-science/competing-in-algorithm-challenges/algorithm-tutorials/mathematics-for-topcoders/
+
+
