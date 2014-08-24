@@ -1,0 +1,21 @@
+/*
+
+Euclid’s algorithm (which considered the fastest algorithm to find gcd) is recursive, repeated replacing the bigger integer by its remainder mod the smaller integer.
+This typically cuts one of the arguments down by about half,and so after a logarithmic number of iterations gets down to the base case.
+
+*/
+
+//assume that a and b cannot both be 0
+
+int gcd(int a, int b)
+{
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b);
+}
+
+int lcm(int a, int b)
+{
+   return b*a/gcd(a,b);
+}
